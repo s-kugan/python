@@ -11,7 +11,10 @@ def selection_sort(list):
       if list[j] < list[min_index]:
         min_index = j
     # Swap the smallest element with the first element in the unsorted part of the list
-    list[i], list[min_index] = list[min_index], list[i]
+    # Break this line into two lines using a temporary variable
+    temp = list[i]
+    list[i] = list[min_index]
+    list[min_index] = temp
   # Return the sorted list
   return list
 
